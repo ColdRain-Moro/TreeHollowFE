@@ -43,13 +43,13 @@ import {ref} from "vue";
 import FabBtn from "./components/FabBtn.vue";
 import {useUserInfoStore} from "./stores/userInfo.js";
 
-const title = ref("XAUFEHole - 西财树洞")
+const title = ref("CQUPTHole - 重邮树洞")
 const icon = ref(undefined)
 const actions = ref([])
 
 function handleModifyTitle(newTitle) {
   title.value = newTitle
-  document.title = newTitle === undefined ? 'XAUFEHole - 西财树洞' : newTitle + " | XAUFEHole - 西财树洞"
+  document.title = newTitle === undefined ? 'CQUPTHole - 重邮树洞' : newTitle + " | CQUPTHole - 重邮树洞"
 }
 
 function handleModifyIcon(newIcon) {

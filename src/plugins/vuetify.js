@@ -6,7 +6,7 @@ import 'vuetify/styles'
 import {createVuetify} from 'vuetify'
 import {background, error, primary, secondary} from "../themes/color.js";
 
-const xaufeHoleLight = {
+const cquptHoleLight = {
     dark: false,
     colors: {
         background: background,
@@ -24,9 +24,9 @@ export default createVuetify(
     // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
     {
         theme: {
-            defaultTheme: 'xaufeHoleLight',
+            defaultTheme: 'cquptHoleLight',
             themes: {
-                xaufeHoleLight,
+                cquptHoleLight,
             }
         }
     }

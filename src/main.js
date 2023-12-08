@@ -17,8 +17,6 @@ createApp(App)
     .mount('#app')
 
 console.log(`
-XAUFEHole 西财树洞 Frontend.
-Powered by Vue.js. Made by HikariLan.
-©2022 XAUFE Computer Technology Research Association, all rights reserved.
+CQUPTHole 重邮树洞 Frontend.
 `.trim()
 )

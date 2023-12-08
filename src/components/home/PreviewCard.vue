@@ -120,7 +120,7 @@ function handleClickShare() {
   copyToClipboard(`${props.data.preview}
 ----
 ${window.location.href + "view/" + props.data.id}
-（来自：西财树洞）`.trim()
+（来自：重邮树洞）`.trim()
   )
 }
 

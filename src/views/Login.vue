@@ -73,7 +73,7 @@ const userInfoStore = useUserInfoStore();
 const emit = defineEmits(['modifytitle', 'modifyicon', 'modifyactions'])
 
 onMounted(() => {
-  emit('modifytitle', '登录到 XAUFEHole 西财树洞')
+  emit('modifytitle', '登录到 CQUPTHole 重邮树洞')
   emit('modifyicon', {
     icon: "mdi-arrow-left",
     tooltip: "返回上一页",
@@ -181,7 +181,7 @@ const authMethods = [
         required: ref(true),
         default: undefined,
         label: "电子邮件地址（账号）",
-        detail: "请输入您的电子邮件地址，例如 example@xctra.cn"
+        detail: "请输入您的电子邮件地址，例如 example@cqupt.edu.cn"
       },
       {
         type: String,
@@ -190,7 +190,7 @@ const authMethods = [
         required: ref(true),
         default: undefined,
         label: "密码",
-        detail: "输入您西财树洞账号的密码。如果您还没有登录过西财树洞，则请选中下方的'注册账号模式'来注册一个账号"
+        detail: "输入您重邮树洞账号的密码。如果您还没有登录过重邮树洞，则请选中下方的'注册账号模式'来注册一个账号"
       },
       {
         type: String,
@@ -216,7 +216,7 @@ const authMethods = [
         required: ref(true),
         default: false,
         label: "注册账号模式",
-        detail: "如果您还没有登录过西财树洞，则请选中此项以使用您输入的电子邮件地址（账号）和密码注册一个账号。"
+        detail: "如果您还没有登录过重邮树洞，则请选中此项以使用您输入的电子邮件地址（账号）和密码注册一个账号。"
       }
     ]
   }

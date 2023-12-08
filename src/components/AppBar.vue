@@ -33,7 +33,7 @@ const router = useRouter();
 defineProps({
   title: {
     type: String,
-    default: "XAUFEHole - 西财树洞"
+    default: "CQUPTHole - 重邮树洞"
   },
   icon: {
     type: Object
