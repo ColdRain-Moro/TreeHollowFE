@@ -96,6 +96,10 @@ const requireRegistrationCode = ref(false)
 
 const requireCaptcha = computed(() => appliedAdditionalParams['registerMode'] !== false)
 
+const registerMode = computed(() => appliedAdditionalParams['registerMode'] !== false)
+
+const loginMode = computed(() => !appliedAdditionalParams['registerMode'])
+
 const authMethods = [
   // {
   //   name: "西安财经大学统一身份认证（不可用）",
@@ -170,6 +174,56 @@ const authMethods = [
   //     }
   //   ]
   // },
+  {
+    name: "通过学信网注册 & 学号登录",
+    href: backendApiUrl + "/auth/chsiAuth",
+    method: "POST",
+    additionalParams: [
+      {
+        type: String,
+        name: "stuId",
+        required: loginMode,
+        default: undefined,
+        label: "学号",
+        detail: "请输入您的学号"
+      },
+      {
+        type: String,
+        name: "chsiCode",
+        required: registerMode,
+        default: undefined,
+        label: "学信网在线验证码",
+        detail: "请输入您的学信网在线验证码"
+      },
+      {
+        type: String,
+        name: "password",
+        password: true,
+        required: ref(true),
+        default: undefined,
+        label: "密码",
+        detail: "输入您重邮树洞账号的密码。如果您还没有登录过重邮树洞，则请选中下方的'注册账号模式'来注册一个账号"
+      },
+      {
+        type: String,
+        name: "captcha",
+        captcha: true,
+        captchaUrl: backendApiUrl + "/captcha/generate",
+        required: requireCaptcha,
+        default: undefined,
+        label: "验证码",
+        detail: "请正确输入下方的验证码"
+      },
+      {
+        type: Boolean,
+        name: "registerMode",
+        required: ref(true),
+        default: false,
+        label: "注册账号模式",
+        detail: "如果您还没有登录过重邮树洞，则请选中此项以使用您输入的电子邮件地址（账号）和密码注册一个账号。"
+      }
+    ]
+  },
   {
     name: "通过电子邮箱登录",
     href: backendApiUrl + "/auth/emailAuth",
