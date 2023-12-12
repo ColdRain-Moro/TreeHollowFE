@@ -171,5 +171,6 @@ const [topPosts] = useAsyncComputed(() => fetchX(backendApiUrl + "/post/top").th
   font-size: 14px;
   color: v-bind(unimportant);
   background-color: v-bind(background);
+  z-index: 10;
 }
 </style>
